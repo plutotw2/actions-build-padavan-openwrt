@@ -13,8 +13,8 @@ on:
   #     - openwrt/*                     # 监听openwrt目录下所有文件的push操作
     paths:                            # 路径
       - logs/k2.md                    # 监听logs目录下 k2.md 的push操作
-  # watch:                              # 监视操作
-  #   types: [started]                  # 点击 star 之后
+  watch:                              # 监视操作
+     types: [started]                  # 点击 star 之后
 env:
   T_NAMES: "PSG1218"        # 设备名字数组
   BASE_PATH: padavan                # 基础目录
@@ -25,6 +25,7 @@ env:
   CLONE_URL: https://github.com/chongshengB/rt-n56u.git # padavan  地址
   CLONE_BRANCH: master              # padavan 分支
   WORK_PATH: /opt/rt-n56u           # 工作目录 一定要加 /
+  ACTIONS_ALLOW_UNSECURE_COMMANDS: true #
 jobs:
   build:
     runs-on: ubuntu-18.04
